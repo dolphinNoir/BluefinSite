@@ -5,8 +5,8 @@ import TabButton from "./TabButton";
 
 const TAB_DATA = [
   {
-    title: "Skills",
-    id: "skills",
+    title: "Our Process", // Changed from "Skills" to "Our Process"
+    id: "process", // Changed from "skills" to "process" for consistency
     content: (
       <ul className="list-disc pl-2">
         <li>Node.js</li>
@@ -41,7 +41,7 @@ const TAB_DATA = [
 ];
 
 const AboutSection = () => {
-  const [tab, setTab] = useState("skills");
+  const [tab, setTab] = useState("process"); // Set default tab to "process"
   const [isPending, startTransition] = useTransition();
 
   const handleTabChange = (id) => {
@@ -62,7 +62,7 @@ const AboutSection = () => {
             className="lg:w-full lg:h-auto"
           />
         </div>
-        <div className="lg:w-1/2 md:pt-[3rem] sm:pt-[2rem]">
+        <div className="lg:w-1/2 pt-[3rem] lg:pt-0">
           <h2 className="text-4xl font-bold mb-4">What We Do</h2>
           <p className="text-base lg:text-lg mb-8">
             Here at Bluefin, we specialize in empowering businesses through
@@ -74,11 +74,12 @@ const AboutSection = () => {
             growth.
           </p>
           <div className="flex flex-row justify-start mb-8">
+            {/* Adjusted tab title to "Our Process" */}
             <TabButton
-              selectTab={() => handleTabChange("skills")}
-              active={tab === "skills"}
+              selectTab={() => handleTabChange("process")}
+              active={tab === "process"}
             >
-              Skills
+              Our Process
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("education")}
