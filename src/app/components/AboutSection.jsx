@@ -62,9 +62,9 @@ const AboutSection = () => {
             className="lg:w-full lg:h-auto"
           />
         </div>
-        <div className="lg:w-1/2 pt-[3rem] lg:pt-0">
+        <div className="lg:w-1/2 pt-[3rem] lg:pl-20 lg:pt-0">
           <h2 className="text-4xl font-bold mb-4">What We Do</h2>
-          <p className="text-base lg:text-lg mb-8">
+          <p className="text-base lg:text-lg mb-8 max-w-[90%]">
             Here at Bluefin, we specialize in empowering businesses through
             bespoke automation solutions tailored to their unique needs. Our
             approach is simple yet powerful: we delve deep into understanding
@@ -73,6 +73,7 @@ const AboutSection = () => {
             automation can streamline operations, boost productivity, and drive
             growth.
           </p>
+          <h3 className="text-2xl font-bold mb-4">Our Stages</h3>
           <div className="flex flex-row justify-start mb-8">
             {/* Adjusted tab title to "Our Process" */}
             <TabButton
