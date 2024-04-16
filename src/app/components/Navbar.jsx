@@ -8,12 +8,12 @@ import Image from "next/image";
 
 const navLinks = [
   {
-    title: "About",
-    path: "#about",
+    title: "About Us",
+    path: "#about-us",
   },
   {
-    title: "Projects",
-    path: "#projects",
+    title: "Our Process",
+    path: "#our-process",
   },
   {
     title: "Contact",

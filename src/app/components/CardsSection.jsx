@@ -3,7 +3,7 @@ import CustomCard from "./CustomCard";
 
 export const CardsSection = () => {
   return (
-    <div className="mt-[7rem] lg:mt-[2rem]">
+    <section id="our-process" className="mt-[7rem] lg:mt-[2rem]">
       <h2 className="text-5xl font-semibold mb-4 text-white pb-[4rem]">
         Our Process
       </h2>
@@ -44,7 +44,7 @@ export const CardsSection = () => {
           iconPath="M13 10V3L4 14h7v7l9-11h-7z"
         />
       </div>
-    </div>
+    </section>
   );
 };
 
