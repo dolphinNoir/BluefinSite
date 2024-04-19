@@ -1,6 +1,6 @@
 import React from "react";
 
-function CustomCard({ step, description, bgColor, icon, iconPath }) {
+function CustomCard({ step, description, bgColor, icon, iconComponent }) {
   return (
     <div
       className={`${bgColor} p-8 rounded-lg shadow-md transition duration-300 transform hover:-translate-y-1 hover:shadow-xl flex flex-col items-center justify-center`}
@@ -10,16 +10,8 @@ function CustomCard({ step, description, bgColor, icon, iconPath }) {
           {step}
         </h3>
         {icon && (
-          <div className="flex items-center justify-center absolute top-6 right-4 h-10 w-10 rounded-full bg-blue-500 text-white mb-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              className="h-5 w-5"
-            >
-              <path d={iconPath} />
-            </svg>
+          <div className="flex items-center justify-center absolute top-6 right-4 h-12 w-12 rounded-full bg-blue-500 text-white mb-2">
+            {iconComponent}
           </div>
         )}
       </div>

@@ -11,7 +11,6 @@ const Footer = () => {
           width={65}
           height={65}
         />
-        <p className="text-slate-600">All rights reserved.</p>
       </div>
     </footer>
   );

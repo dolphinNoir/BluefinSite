@@ -7,16 +7,15 @@ import Image from "next/image";
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
       email: e.target.email.value,
-      subject: e.target.subject.value,
+      name: e.target.subject.value,
       message: e.target.message.value,
     };
     const JSONdata = JSON.stringify(data);
-    const endpoint = "/api/send";
+    const endpoint = "https://formspree.io/f/mayraera"; // Replace with your Formspree form endpoint
 
     // Form the request for sending data to the server.
     const options = {
@@ -62,6 +61,22 @@ const EmailSection = () => {
           <form className="flex flex-col" onSubmit={handleSubmit}>
             <div className="mb-6">
               <label
+                htmlFor="name"
+                className="text-white block text-sm mb-2 font-medium"
+              >
+                Name
+              </label>
+              <input
+                name="subject"
+                type="text"
+                id="subject"
+                required
+                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                placeholder="John Smith"
+              />
+            </div>
+            <div className="mb-6">
+              <label
                 htmlFor="email"
                 className="text-white block mb-2 text-sm font-medium"
               >
@@ -74,22 +89,6 @@ const EmailSection = () => {
                 required
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
                 placeholder="jacob@google.com"
-              />
-            </div>
-            <div className="mb-6">
-              <label
-                htmlFor="subject"
-                className="text-white block text-sm mb-2 font-medium"
-              >
-                Subject
-              </label>
-              <input
-                name="subject"
-                type="text"
-                id="subject"
-                required
-                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="Just saying hi"
               />
             </div>
             <div className="mb-6">
