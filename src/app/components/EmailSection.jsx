@@ -44,7 +44,7 @@ const EmailSection = () => {
       className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
     >
       <div className=" z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
-      <div className="z-10">
+      <div className="z-0">
         <h5 className="text-xl font-bold text-white my-2">Let&apos;s Talk</h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
           {" "}
